@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ElsaKuy Chat</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #e8e4f2; /* ungu sangat lembut */
+    }
+
+    /* Header */
+    header {
+        background: linear-gradient(45deg, #7d2ae8, #11c46b); 
+        color: white;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 20px;
+    }
+
+    header img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .logo {
+        font-weight: bold;
+    }
+
+    /* Layout */
+    .chat-container {
+        display: flex;
+        height: calc(100vh - 70px);
+    }
+
+    /* Sidebar chat list */
+    .sidebar {
+        width: 30%;
+        background: #fafafa;
+        border-right: 1px solid #ddd;
+        overflow-y: auto;
+    }
+
+    .search {
+        padding: 10px;
+        background: #f2f2f2;
+    }
+
+    .search input {
+        width: 100%;
+        padding: 8px;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        background: #ffffff;
+    }
+
+    .chat-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .chat-item {
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-bottom: 1px solid #eee;
+        cursor: pointer;
+    }
+
+    .chat-item:hover {
+        background: #f4f0ff;
+    }
+
+    .chat-item img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        border: 2px solid #7d2ae8;
+    }
+
+    /* Chat Area */
+    .chat-area {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        background: #f5f2ff;
+    }
+
+    .messages {
+        flex: 1;
+        padding: 15px;
+        overflow-y: auto;
+    }
+
+    .msg {
+        max-width: 70%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        line-height: 1.4;
+    }
+
+    .msg.me {
+        background: #c6ffd4;
+        margin-left: auto;
+        border: 1px solid #11c46b;
+    }
+
+    .msg.other {
+        background: white;
+        margin-right: auto;
+        border: 1px solid #c5b2ff;
+    }
+
+    /* Input Chat */
+    .input-area {
+        display: flex;
+        padding: 10px;
+        background: #f0eaff;
+    }
+
+    .input-area input {
+        flex: 1;
+        padding: 10px;
+        border-radius: 30px;
+        border: none;
+        outline: none;
+    }
+
+    .send-btn {
+        margin-left: 10px;
+        padding: 10px 20px;
+        background: linear-gradient(45deg, #7d2ae8, #11c46b);
+        color: white;
+        border-radius: 30px;
+        cursor: pointer;
+        border: none;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="https://i.pravatar.cc/150?img=5" alt="profil">
+    <div class="logo">ElsaKuy Chat</div>
+</header>
+
+<div class="chat-container">
+
+    <!-- Sidebar List Chat -->
+    <aside class="sidebar">
+        <div class="search">
+            <input type="text" placeholder="Cari chat...">
+        </div>
+
+        <ul class="chat-list">
+            <li class="chat-item">
+                <img src="https://i.pravatar.cc/150?img=12">
+                <div>Aulia</div>
+            </li>
+
+            <li class="chat-item">
+                <img src="https://i.pravatar.cc/150?img=45">
+                <div>Budi</div>
+            </li>
+
+            <li class="chat-item">
+                <img src="https://i.pravatar.cc/150?img=32">
+                <div>Elsa</div>
+            </li>
+
+            <li class="chat-item">
+                <img src="https://i.pravatar.cc/150?img=8">
+                <div>Fajar</div>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Chat Area -->
+    <main class="chat-area">
+        <div class="messages">
+            <div class="msg other">Hai! Selamat datang di ElsaKuy Chat tema ungu + hijau.</div>
+            <div class="msg me">Keren banget tampilannya 😄</div>
+        </div>
+
+        <div class="input-area">
+            <input type="text" placeholder="Ketik pesan...">
+            <button class="send-btn">Kirim</button>
+        </div>
+    </main>
+
+</div>
+
+</body>
+</html>
